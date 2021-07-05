@@ -31,7 +31,7 @@
     box-sizing: border-box;
     text-align: center;
     font-size: 48px;
-    margin-top: 250px;
+    /* margin-top: 250px; */
     color: rgb(12, 27, 71);
     display: block;
     /* margin-block-end: 607px; */
@@ -39,7 +39,7 @@
 
 .menu {
     box-sizing: border-box;
-    position: absolute;
+    position: relative;
     text-align: center;
     display: block;
     z-index: -1;
