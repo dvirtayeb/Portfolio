@@ -1,6 +1,6 @@
-import React from "react";
+import {React, Component} from "react";
 import { Route } from "react-router";
-import { BrowserRouter} from 'react-router-dom'; 
+import { BrowserRouter, Switch} from 'react-router-dom'; 
 // Picutre
 import logo_Jems from './pictures/logo_Jems.png';
 import Management from './pictures/Championship/management.jpg';
@@ -10,33 +10,48 @@ import jemsPage from './jemsPage.js';
 import championship from './Championship.js'; 
 // Style
 import './static/css/projects.css';
- 
-function showProjects(props) {
+
+function scrollDown (props){
+  var scroll = document.getElementById("current_project")
+  scroll.scrollIntoView();
+}
+
+class showProjects extends Component {
+  render(){
   return (
-    <div className="projects">
+    <div className="projects" onClick={scrollDown}>
       <BrowserRouter>
-        <div className="Management">
+
+        {/* Project Championship Management! */}
+        <div className="Management" >
           <h1>Projects</h1>
           <Thumbnail
-          link="/Championship"
+          link="/dvirtayeb-github-.io/projects/Championship"
           image={Management}
           title="Championship Management"
           category="App"
           />
-        </div> 
+        </div>
+
+        {/* Project Jems! */}
         <div className="Jems">
           <Thumbnail
-          link="/jemsPage"
+          link="/dvirtayeb-github-.io/projects/jemsPage"
           image={logo_Jems}
           title="Jems-Calculate tips"
           category="Web app"
           />
-        <Route path="/JemsPage" component={jemsPage}/>
-        <Route path="/Championship" component={championship}/>
+        </div>
+        <div id = "current_project">
+          <Switch>
+            <Route exact path="/dvirtayeb-github-.io/projects/JemsPage" component={jemsPage}/>
+            <Route exact path="/dvirtayeb-github-.io/projects/Championship" component={championship}/>
+          </Switch>
         </div>
       </BrowserRouter>
     </div>
   )
+  }
 }
 
 export default showProjects;

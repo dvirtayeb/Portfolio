@@ -4,7 +4,7 @@ import './static/css/projects.css';
  
 function Thumbnail(props) {
   return (
-    <div className="project">
+    <div className="project_thumbnail">
       <Link to={props.link}>
         <div className="project-image">
           <img src={props.image} alt="project_image"/>
