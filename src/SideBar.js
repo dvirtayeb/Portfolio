@@ -20,6 +20,7 @@ class SideBar extends Component {
   toggleSidebar() {
     this.setState(state => ({sidebar: !state.sidebar}));
   }
+  
   render() {
     return(
         <div className="navigation">

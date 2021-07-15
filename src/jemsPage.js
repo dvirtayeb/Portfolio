@@ -1,6 +1,7 @@
 import React from "react"
 import './static/css/projects.css';
-import exampleTip from './pictures/example_tips3.png';
+import exampleTip from './pictures/example_tips_jems.png';
+import example2Tip from './pictures/After_search.png';
 function show(props) {
     return (
       <div className="jemsPage">
@@ -12,7 +13,10 @@ function show(props) {
              <br></br>
           </h4>
           <img id="tips" src={exampleTip} alt=""></img>
-    </div>
+          <br></br>
+          <img id="tips" src={example2Tip} alt=""></img>   
+      </div>
+    
   )
 }
 

@@ -6,7 +6,6 @@ import Courses from './Courses.js';
 import About from './About.js';
 
 
-
 function menu(props) {
     return(
         <div className="menu">
@@ -20,3 +19,4 @@ function menu(props) {
     )
 }
 export default menu;
+

@@ -10,7 +10,10 @@ function sayHello(props) {
             <h4>
                 on this website you can see some of my projects I did while studing at the academy,
                 <br></br>in my free time and as part of the courses I took.
-                <br></br>* This website is written in JavaScript - React
+                <br></br>
+                <br></br>
+                * This website is written in JavaScript - React
+                <br></br>
             </h4>
         </div>
         </BrowserRouter>

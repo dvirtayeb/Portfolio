@@ -16,7 +16,6 @@ class Application extends Component {
 			open: false
     }
   }
-
   
   render(){  
         return (
