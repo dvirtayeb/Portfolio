@@ -2,7 +2,8 @@ import React from "react"
 import './static/css/projects.css';
 import exampleTip from './pictures/example_tips_jems.png';
 import example2Tip from './pictures/After_search.png';
-function show(props) {
+function Show(props) {
+
     return (
       <div className="jemsPage">
           <h1>Jems - Calculate tips Project</h1>
@@ -20,4 +21,4 @@ function show(props) {
   )
 }
 
-export default show;
+export default Show;

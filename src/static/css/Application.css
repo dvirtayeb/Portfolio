@@ -1,60 +1,53 @@
 * {
     box-sizing: border-box;
+    color: rgb(255, 255, 255);
 }
 
 .navigation-sub {
-    background-color: rgba(0, 134, 134, 0.52);
+    /* background-color: rgba(0, 134, 134, 0.52); */
     width: 100%;
     height: 40px;
-    box-sizing: border-box;
-    top: 0px;
+    top: 15px;
     display: block;
     position: fixed;
 }
 
 #header-img {
-    box-sizing: border-box;
-    position: absolute;
+    position: fixed;
     z-index: -1;
     top: 0px;
     width: 100%;
     height: 100%;
-    opacity: 0.7;
     display: block;
-    border: 2px solid black;
-    /* margin-block-end: 207px; */
-    /* margin: 150px; */
     
 }
 
 #portfolio{
     box-sizing: border-box;
     text-align: center;
-    font-size: 48px;
-    /* margin-top: 250px; */
-    color: rgb(12, 27, 71);
+    font-size: 100px;
+    margin-top: 100px;
+    color: rgb(255, 255, 255);
     display: block;
-    /* margin-block-end: 607px; */
 }
 
 .menu {
     box-sizing: border-box;
-    position: relative;
+    /* position: relative; */
     text-align: center;
     display: block;
     z-index: -1;
-    /* margin-block-start: 607px; */
-    /* margin-top: 200px; */
 }
 
 .item{
-    color: black;
+    color: rgb(98, 0, 255);
     font-size: 2.5ch;
     margin-left: 90px;
 }
 
 .item:hover {
-    color: rgb(0, 18, 98);
+    /* color: rgb(0, 18, 98); */
+    color: rgb(255, 255, 255);
 }
 #nav_item{
     box-sizing: border-box;
@@ -74,7 +67,5 @@ a:link {
 
 img {
     text-align: center;
-    float: left;
     width: 180px;
-    z-index: -1;
 }

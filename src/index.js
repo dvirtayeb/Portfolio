@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router } from 'react-router';
+import { HashRouter } from 'react-router-dom';
 import {createBrowserHistory as history } from 'history'
 import './index.css';
 import Application from './Application';
@@ -9,7 +10,9 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <Router history={history()}>
+    <HashRouter>
       <Application />
+    </HashRouter>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

@@ -1,13 +1,12 @@
-import {React, Component} from "react";
-import { Route } from "react-router";
-import { BrowserRouter, Switch} from 'react-router-dom'; 
+import {React} from "react";
+import { useParams } from 'react-router-dom'; 
 // Picutre
 import logo_Jems from './pictures/logo_Jems.png';
 import Management from './pictures/Championship/management.jpg';
 // Page
 import Thumbnail from './Thumbnail.js';
-import jemsPage from './jemsPage.js';
-import championship from './Championship.js'; 
+import JemsPage from './jemsPage.js';
+import Championship from './Championship.js'; 
 // Style
 import './static/css/projects.css';
 
@@ -16,17 +15,15 @@ function scrollDown (props){
   scroll.scrollIntoView();
 }
 
-class showProjects extends Component {
-  render(){
+function ShowProjects() {
+  const { type } = useParams();
   return (
     <div className="projects" onClick={scrollDown}>
-      <BrowserRouter>
-
         {/* Project Championship Management! */}
         <div className="Management" >
           <h1>Projects</h1>
           <Thumbnail
-          link="/dvirtayeb-github-.io/projects/Championship"
+          link="/Dvir-Portfolio/Projects/Championship"
           image={Management}
           title="Championship Management"
           category="App"
@@ -36,22 +33,18 @@ class showProjects extends Component {
         {/* Project Jems! */}
         <div className="Jems">
           <Thumbnail
-          link="/dvirtayeb-github-.io/projects/jemsPage"
+          link="/Dvir-Portfolio/Projects/JemsPage"
           image={logo_Jems}
           title="Jems-Calculate tips"
           category="Web app"
           />
         </div>
         <div id = "current_project">
-          <Switch>
-            <Route exact path="/dvirtayeb-github-.io/projects/JemsPage" component={jemsPage}/>
-            <Route exact path="/dvirtayeb-github-.io/projects/Championship" component={championship}/>
-          </Switch>
+        {type === 'Championship' && <Championship/>}
+        {type === 'JemsPage' && <JemsPage/>}
         </div>
-      </BrowserRouter>
     </div>
   )
-  }
 }
 
-export default showProjects;
+export default ShowProjects;

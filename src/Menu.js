@@ -6,17 +6,20 @@ import Courses from './Courses.js';
 import About from './About.js';
 
 
-function menu(props) {
+function Menu(props) {
     return(
-        <div className="menu">
+      <div className="menu">
         <Switch>
-          <Route exact path="/dvirtayeb-github-.io" component={Hello}/>
-          <Route exact path="/dvirtayeb-github-.io/projects" component={Projects}/>
-          <Route exact path="/dvirtayeb-github-.io/Courses" component={Courses}/>
-          <Route exact path="/dvirtayeb-github-.io/about" component={About}/>
+          <Route exact path="/" component={Hello}/>
+          <Route exact path="/Dvir-Portfolio/Projects" component={Projects}/>
+          <Route path="/Dvir-Portfolio/Courses" component={Courses}/>
+          <Route path="/Dvir-Portfolio/About" component={About}/>
+          <Route path="/Dvir-Portfolio/Projects/:type">
+            <Projects/>
+          </Route>
         </Switch>
       </div>
     )
 }
-export default menu;
+export default Menu;
 

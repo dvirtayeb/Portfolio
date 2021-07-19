@@ -25,15 +25,15 @@ class SideBar extends Component {
     return(
         <div className="navigation">
           <div className="navigation-sub">
-            <li id="nav_item"><Link to="/dvirtayeb-github-.io" className="item">Home </Link></li>
+            <li id="nav_item"><Link to="/" className="item">Home </Link></li>
             <Menu isOpen={this.state.sidebar} onStateChange={(state) => this.handleStateChange(state)}>
-                <li ><Link to="/dvirtayeb-github-.io/projects" className="bm-item" onClick={() => this.closeSidebar()}>
+                <li ><Link to="/Dvir-Portfolio/Projects" className="bm-item" onClick={() => this.closeSidebar()}>
                   Projects 
                   </Link></li>
-                <li ><Link to="/dvirtayeb-github-.io/Courses" className="bm-item" onClick={() => this.closeSidebar()}>
+                <li ><Link to="/Dvir-Portfolio/Courses" className="bm-item" onClick={() => this.closeSidebar()}>
                   Courses 
                   </Link></li>
-                <li ><Link to="/dvirtayeb-github-.io/about" className="bm-item" onClick={() => this.closeSidebar()}>
+                <li ><Link to="/Dvir-Portfolio/About" className="bm-item" onClick={() => this.closeSidebar()}>
                   About 
                   </Link></li>
             </Menu>

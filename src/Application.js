@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import { BrowserRouter } from 'react-router-dom'; 
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 // Pages:
 import Menu from './Menu.js'
 import SideBar from './SideBar.js';
@@ -9,17 +9,11 @@ import './static/css/SideBar.css';
 // picture
 import Header from './pictures/header5_black.jpg';
 
-class Application extends Component {
-  constructor(props) {
-		super(props);
-		this.state = {
-			open: false
-    }
-  }
-  
-  render(){  
-        return (
-            <BrowserRouter>
+function Application() {  
+  const history = useHistory();
+  console.log(history);
+      return (
+            <div>
               <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
               <SideBar pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
               <div className="portfolio-header">
@@ -29,9 +23,10 @@ class Application extends Component {
                 </picture>
               </div>
               <Menu/>
-            </BrowserRouter>
-              );
-    }
+            </div>
+            
+      );
 }
+
 
 export default Application;
