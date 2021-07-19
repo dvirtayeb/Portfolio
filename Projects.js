@@ -1,5 +1,5 @@
 import {React} from "react";
-import { Switch, Route, useParams } from 'react-router-dom'; 
+import { useParams } from 'react-router-dom'; 
 // Picutre
 import logo_Jems from './pictures/logo_Jems.png';
 import Management from './pictures/Championship/management.jpg';
@@ -40,14 +40,6 @@ function ShowProjects() {
           />
         </div>
         <div id = "current_project">
-        <Switch>
-          <Route path="/Dvir-Portfolio/Projects/:type" >
-            <JemsPage/>
-          </Route>
-          <Route path="/Dvir-Portfolio/Projects/:type" >
-            <Championship/>
-          </Route>
-        </Switch>
         {type === 'Championship' && <Championship/>}
         {type === 'JemsPage' && <JemsPage/>}
         </div>

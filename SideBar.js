@@ -25,7 +25,7 @@ class SideBar extends Component {
     return(
         <div className="navigation">
           <div className="navigation-sub">
-            <li id="nav_item"><Link to="/Dvir-Portfolio" className="item">Home </Link></li>
+            <li id="nav_item"><Link to="/" className="item">Home </Link></li>
             <Menu isOpen={this.state.sidebar} onStateChange={(state) => this.handleStateChange(state)}>
                 <li ><Link to="/Dvir-Portfolio/Projects" className="bm-item" onClick={() => this.closeSidebar()}>
                   Projects 
