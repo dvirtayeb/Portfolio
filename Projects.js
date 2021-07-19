@@ -1,5 +1,5 @@
 import {React} from "react";
-import { useLocation} from 'react-router-dom'; 
+import { Switch, Route, useParams } from 'react-router-dom'; 
 // Picutre
 import logo_Jems from './pictures/logo_Jems.png';
 import Management from './pictures/Championship/management.jpg';
@@ -16,16 +16,14 @@ function scrollDown (props){
 }
 
 function ShowProjects() {
-  const { search } = useLocation();
-  const match = search.match(/type=(.*)/);
-  const type = match?.[1];
+  const { type } = useParams();
   return (
     <div className="projects" onClick={scrollDown}>
         {/* Project Championship Management! */}
         <div className="Management" >
           <h1>Projects</h1>
           <Thumbnail
-          link="/Dvir-Portfolio/Projects?type=Championship"
+          link="/Dvir-Portfolio/Projects/Championship"
           image={Management}
           title="Championship Management"
           category="App"
@@ -35,13 +33,21 @@ function ShowProjects() {
         {/* Project Jems! */}
         <div className="Jems">
           <Thumbnail
-          link="/Dvir-Portfolio/Projects?type=JemsPage"
+          link="/Dvir-Portfolio/Projects/JemsPage"
           image={logo_Jems}
           title="Jems-Calculate tips"
           category="Web app"
           />
         </div>
         <div id = "current_project">
+        <Switch>
+          <Route path="/Dvir-Portfolio/Projects/:type" >
+            <JemsPage/>
+          </Route>
+          <Route path="/Dvir-Portfolio/Projects/:type" >
+            <Championship/>
+          </Route>
+        </Switch>
         {type === 'Championship' && <Championship/>}
         {type === 'JemsPage' && <JemsPage/>}
         </div>

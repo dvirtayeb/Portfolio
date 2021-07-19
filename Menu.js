@@ -16,7 +16,7 @@ function Menu(props) {
       <div className="menu">
         <Switch>
           <Route exact path="/Dvir-Portfolio" component={Hello}/>
-          <Route exact path="/Dvir-Portfolio/Projects" component={Projects}/>
+          <Route path="/Dvir-Portfolio/Projects" component={Projects}/>
           <Route path="/Dvir-Portfolio/Courses" component={Courses}/>
           <Route path="/Dvir-Portfolio/About" component={About}/>
         </Switch>
